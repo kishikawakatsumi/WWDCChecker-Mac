@@ -13,6 +13,7 @@
 		146562761535BEE2007D5E49 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 146562741535BEE2007D5E49 /* Credits.rtf */; };
 		146562791535BEE2007D5E49 /* WWDCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 146562781535BEE2007D5E49 /* WWDCAppDelegate.m */; };
 		1465627C1535BEE2007D5E49 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1465627A1535BEE2007D5E49 /* MainMenu.xib */; };
+		146562B61535C96F007D5E49 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 146562B51535C96F007D5E49 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,14 +22,15 @@
 		146562681535BEE2007D5E49 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		146562691535BEE2007D5E49 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1465626A1535BEE2007D5E49 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1465626D1535BEE2007D5E49 /* WWDCChecker-Info.plist */ = {isa = PBXFileReference; path = "WWDCChecker-Info.plist"; sourceTree = "<group>"; };
+		1465626D1535BEE2007D5E49 /* WWDCChecker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WWDCChecker-Info.plist"; sourceTree = "<group>"; };
 		1465626F1535BEE2007D5E49 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		146562711535BEE2007D5E49 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		146562731535BEE2007D5E49 /* WWDCChecker-Prefix.pch */ = {isa = PBXFileReference; path = "WWDCChecker-Prefix.pch"; sourceTree = "<group>"; };
+		146562731535BEE2007D5E49 /* WWDCChecker-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WWDCChecker-Prefix.pch"; sourceTree = "<group>"; };
 		146562751535BEE2007D5E49 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		146562771535BEE2007D5E49 /* WWDCAppDelegate.h */ = {isa = PBXFileReference; path = WWDCAppDelegate.h; sourceTree = "<group>"; };
+		146562771535BEE2007D5E49 /* WWDCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWDCAppDelegate.h; sourceTree = "<group>"; };
 		146562781535BEE2007D5E49 /* WWDCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WWDCAppDelegate.m; sourceTree = "<group>"; };
 		1465627B1535BEE2007D5E49 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		146562B51535C96F007D5E49 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +39,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				146562661535BEE2007D5E49 /* Cocoa.framework in Frameworks */,
+				146562B61535C96F007D5E49 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				146562651535BEE2007D5E49 /* Cocoa.framework */,
+				146562B51535C96F007D5E49 /* WebKit.framework */,
 				146562671535BEE2007D5E49 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -252,6 +256,10 @@
 		146562801535BEE2007D5E49 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Vendor\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WWDCChecker/WWDCChecker-Prefix.pch";
 				INFOPLIST_FILE = "WWDCChecker/WWDCChecker-Info.plist";
@@ -263,6 +271,10 @@
 		146562811535BEE2007D5E49 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Vendor\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WWDCChecker/WWDCChecker-Prefix.pch";
 				INFOPLIST_FILE = "WWDCChecker/WWDCChecker-Info.plist";
@@ -290,6 +302,7 @@
 				146562811535BEE2007D5E49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
