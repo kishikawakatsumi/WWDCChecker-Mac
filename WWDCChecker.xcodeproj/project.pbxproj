@@ -136,7 +136,7 @@
 				LastUpgradeCheck = 0430;
 				ORGANIZATIONNAME = "Kishikawa Katsumi";
 			};
-			buildConfigurationList = 1465625B1535BEE2007D5E49 /* Build configuration list for PBXProject "WWDCChecker" */;
+			buildConfigurationList = 1465625B1535BEE2007D5E49 /* Build configuration list for PBXProject "WWDCCheckerMac" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -286,7 +286,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1465625B1535BEE2007D5E49 /* Build configuration list for PBXProject "WWDCChecker" */ = {
+		1465625B1535BEE2007D5E49 /* Build configuration list for PBXProject "WWDCCheckerMac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1465627D1535BEE2007D5E49 /* Debug */,
